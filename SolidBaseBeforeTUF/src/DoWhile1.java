@@ -1,0 +1,41 @@
+/* Make a menu driven program. The user can enter 2 numbers, either 1 or 0. 
+If the user enters 1 then keep taking input from the user for a student’s marks(out of 100). 
+If they enter 0 then stop.
+If he/ she scores :
+Marks >=90 -> print “This is Good”
+89 >= Marks >= 60 -> print “This is also Good”
+59 >= Marks >= 0 -> print “This is Good as well”
+	Because marks don’t matter but our effort does.
+(Hint : use do-while loop but think & understand why) */
+
+import java.util.*;
+class DoWhile1{
+    public static void main(String[] args) {
+    Scanner sc= new Scanner(System.in);
+    
+    int marks, choice;
+    do{
+        System.out.println("Enter number 1 or 0");
+        choice= sc.nextInt();
+        
+        switch(choice){
+            case 1:
+                System.out.println("Enter the marks out of 100");
+                marks= sc.nextInt();
+                if(marks>=90)
+                System.out.println("This is Good");
+                else if(marks>=60 && marks<=89)
+                System.out.println("This is also Good");
+                else 
+                System.out.println("This is Good as well");
+                break;
+                default: 
+                System.out.println("Exiting the program");
+                break;
+
+        }
+        
+       }while(choice!=0);
+    
+    }
+}

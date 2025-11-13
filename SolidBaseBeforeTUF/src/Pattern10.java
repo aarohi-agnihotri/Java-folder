@@ -13,7 +13,7 @@ class Pattern10{
                 System.out.print("*");
             }
             // inner part, for space
-            int spaces= 2*r-(2*i);
+            int spaces= 2*(r-i);
             for(int k=1; k<=spaces; k++){
                 System.out.print(" ");
             }
@@ -24,7 +24,7 @@ class Pattern10{
             System.out.println();
         }
 
-        // second outer part
+        // second outer part or lower part
         for(int i=r; i>=1; i--){
 
             // inner part , for star
@@ -32,7 +32,7 @@ class Pattern10{
                 System.out.print("*");
             }
             // inner part, for space
-            int spaces= 2*r-(2*i);
+            int spaces= 2*(r-i);
             for(int k=1; k<=spaces; k++){
                 System.out.print(" ");
             }

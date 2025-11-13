@@ -29,7 +29,7 @@ class DoWhile1{
                 else 
                 System.out.println("This is Good as well");
                 break;
-                default: 
+            default: 
                 System.out.println("Exiting the program");
                 break;
 

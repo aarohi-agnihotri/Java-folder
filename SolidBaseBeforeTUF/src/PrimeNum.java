@@ -5,20 +5,20 @@ class PrimeNum {
         System.out.println("Enter a number to check if it is prime:");
         int n = sc.nextInt();
         
-        if(n==1 || n==0)
-            System.out.println(n + " is neither prime nor composite.");
-        else if(n==2 || n==3)
-        System.out.println(n + "is a prime number");
-        else{
-            int temp=n;
-            int half=temp/2;
-            for(int i=1;i<=half; i++){
-                if(half%i == 0){
+        // * Prime checking with early exit and using n/2 or using square root of n
+        // * using √n is because if a number has any factor , one of those factors will always less than or equal to √n
+        if(n==3 || n==2){
+            System.out.println( n+ " is a prime number ");
+        }
+
+            // for(int i=2; i <= n/2 ; i++){
+            for(int i=2; i <= Math.sqrt(n) ; i++){
+                if(n%i == 0){
                     System.out.println(n + " is not a prime number");
                     break;
                 }
-
+                else 
+                System.out.println(n + " is a prime number");
             }
-        }
     }
 }

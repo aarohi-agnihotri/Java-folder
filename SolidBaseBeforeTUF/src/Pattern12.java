@@ -12,7 +12,7 @@ class Pattern12{
             for(int j=1; j<=r-i; j++){
                 System.out.print(" ");
             }
-            // stars inner loop 2
+            // numbers inner loop 2
             for(int k=1; k<=2*i-1; k++){
                 if(k%2==0)
                     System.out.print(" ");

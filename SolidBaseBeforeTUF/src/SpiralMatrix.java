@@ -64,16 +64,20 @@ class SpiralMatrix{
             ce--;
 
             //3
-            for( c=ce; c>=cs; c--){
-                System.out.print(arr[re][c] +"\t");
+            if(rs <= re){
+                for( c=ce; c>=cs; c--){
+                    System.out.print(arr[re][c] +"\t");
+                }
+                re--;
             }
-            re--;
 
             //4
-            for( r=re; r>=rs; r--){
-                System.out.print(arr[r][cs] +"\t");
+            if(cs <= ce){
+                for( r=re; r>=rs; r--){
+                    System.out.print(arr[r][cs] +"\t");
+                }
+                cs++;
             }
-            cs++;
         }
     }
         

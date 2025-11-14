@@ -11,7 +11,6 @@
 // 5. Then we will traverse in the column column_start from row_end to row_start and increase the column_start by 1.
 // 6. We will do the above steps from 2 to 5 until row_start <= row_end -and column_start <= column_end.
 
-
 import java.util.*;
 class SpiralMatrix{
     public static void main(String args[]){
@@ -50,14 +49,34 @@ class SpiralMatrix{
         int re = r-1;  // row end, row - 1 because indexing start from 0
         int ce = c-1; // column end
 
-        while(i<r && j<c){
+        while(rs<=re && cs<=ce){
 
             // 1
-            for()
-            
+            for( c=cs;  c<=ce; c++){
+                System.out.print(arr[rs][c] +"\t");
+            }
+            rs++;
 
+            //2
+            for( r=rs; r<=re; r++){
+                System.out.print(arr[r][ce] +"\t");
+            }
+            ce--;
+
+            //3
+            for( c=ce; c>=cs; c--){
+                System.out.print(arr[re][c] +"\t");
+            }
+            re--;
+
+            //4
+            for( r=re; r>=rs; r--){
+                System.out.print(arr[r][cs] +"\t");
+            }
+            cs++;
         }
-        
     }
+        
+}
 
 
